@@ -2,7 +2,7 @@
 
 ## Source code
 
-Import the project using a subversion program:
+Clone the project using git:
 
 ```
 git clone https://github.com/ei12134/distributed-backup-service.git
@@ -10,9 +10,15 @@ git clone https://github.com/ei12134/distributed-backup-service.git
 
 ## Compilation
 
+### Software requirements
+
+JDK 8 and JRE 8 or newer
+
+### Build process
+
 Create a binary folder inside the project folder:
 ```
-mkdir bin
+mkdir -p bin
 ```
 
 Compile the source files inside the project folder:
@@ -21,7 +27,7 @@ Compile the source files inside the project folder:
 javac -d bin/ src/core/*.java src/dispatchers/*.java src/message/*.java src/rmi/*.java src/utils/*.java src/database/*.java src/protocols/*.java src/testapp/*.java
 ```
 
-Copy peer resources: 
+Copy peer resources and make sure all peers have the same shared key: 
 ```
 cp res/crypto/* res/img/* bin/
 ```
